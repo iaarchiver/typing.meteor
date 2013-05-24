@@ -36,10 +36,6 @@ if (Meteor.isClient) {
         console.log('is not ready for input');
         setTimeout(updateText,500);
       }
-    },
-    'click #select': function(){
-        var t = document.getElementById('t');
-        t.setSelectionRange(0,t.value.length);
     }
   });
 }
