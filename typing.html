@@ -1,0 +1,30 @@
+<head>
+  <title>type</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  {{> editor}}
+   <div class="copyright">
+    Powered by <a href="http://meteor.com" title="Built with sMeteor" >meteor.com</a>
+    <span>2013 © <a href="http://iaarchiver.net">ia_archiver</a></span>
+  </div>
+</body>
+
+<template name="editor">
+	<textarea id="t"></textarea>
+	<div id="loader" class="{{#if isLoading}}active{{else}}inactive{{/if}}">
+		<div class="cssloader">
+			<div class="loadbar bar01"></div>
+			<div class="loadbar bar02"></div>
+			<div class="loadbar bar03"></div>
+			<div class="loadbar bar04"></div>
+			<div class="loadbar bar05"></div>
+			<div class="loadbar bar06"></div>
+			<div class="loadbar bar07"></div>
+			<div class="loadbar bar08"></div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,76 @@
+/*
+USAGE:
+<div class="cssloader">
+	<div class="loadbar bar01"></div>
+	<div class="loadbar bar02"></div>
+	<div class="loadbar bar03"></div>
+	<div class="loadbar bar04"></div>
+	<div class="loadbar bar05"></div>
+	<div class="loadbar bar06"></div>
+	<div class="loadbar bar07"></div>
+	<div class="loadbar bar08"></div>
+</div>
+*/
+
+@import "lib.lessimport";
+
+.cssloader(@size){
+	width: @size; height:@size;
+	position:relative;
+
+	.loadbar{
+		@bar_w: @size/9; @bar_hs: @size/4; @bar_he: @size/2;
+		left: @size/2 - @bar_w/2; top: 0px;
+		width: @bar_w; height: @bar_he - @bar_hs;
+
+		position:absolute;
+		background: #fff;
+
+		.border-radius(@size/6);
+		.animation(cssloader 1.04s infinite linear);
+		.transform-origin(@bar_w/2 @bar_he);
+
+		&.bar01{
+			.transform(rotate(-90deg));
+			.animation-delay(.39s);
+		}
+		&.bar02{
+			.transform(rotate(-45deg));
+			.animation-delay(.52s);
+		}
+		&.bar03{
+			//.transform(rotate(0deg));
+			.animation-delay(.65s);
+		}
+		&.bar04{
+			.transform(rotate(45deg));
+			.animation-delay(.78s);
+		}
+		&.bar05{
+			.transform(rotate(90deg));
+			.animation-delay(.91s);
+		}
+		&.bar06{
+			.transform(rotate(135deg));
+			.animation-delay(1.04s);
+		}
+		&.bar07{
+			.transform(rotate(180deg));
+			.animation-delay(1.17s);
+		}
+		&.bar08{
+			.transform(rotate(-135deg));
+			.animation-delay(1.3s);
+		}
+	}
+}
+
+@-webkit-keyframes cssloader{
+	0%{ background-color:transparent}
+	100%{ background-color:#fff}
+}
+
+@keyframes cssloader{
+	0%{ background-color:transparent}
+	100%{ background-color:#fff}
+}
