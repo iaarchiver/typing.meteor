@@ -8,15 +8,15 @@ html,body{
 	.copyright{
 		position: absolute;
 		bottom: 0; left: 0;
-		width: 100%; height: 10%;
+		width: 100%; height: 3em;
 
 		.box-sizing(border-box);
 		.box-shadow(0,0,20px,#fff);
 
-		padding: .5em 1em;
-		color: #555555;
+		padding: .3em 1em;
+		color: #777777;
 		text-align: right;
-		line-height: 1em;
+		line-height: 1.1em;
 		font-size: .8em;
 		a{ text-decoration: none;}
 		span{ display:block;}
@@ -52,11 +52,25 @@ textarea{
 	}
 	&.inactive{
 		opacity:0;
-		//z-index: -1;
 	}
-
 	.cssloader{
 		.cssloader(42px);
 		.centering(40px,40px);
+	}
+}
+
+#select{
+	.box-shadow(0,0,5px,rgba(0,0,0,.2));
+
+	position: fixed;
+	bottom: 0; left: 0;
+	cursor: pointer;
+	z-index: 9;
+	padding: .4em 1em;
+	background: rgba(0,0,0,.15);
+
+	border:1px solid rgba(128,128,128,.15);
+	&:hover{
+
 	}
 }

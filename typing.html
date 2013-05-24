@@ -7,7 +7,7 @@
 
 <body>
   {{> editor}}
-   <div class="copyright">
+  <div class="copyright">
     Powered by <a href="http://meteor.com" title="Built with sMeteor" >meteor.com</a>
     <span>2013 © <a href="http://iaarchiver.net">ia_archiver</a></span>
   </div>
@@ -15,6 +15,7 @@
 
 <template name="editor">
 	<textarea id="t"></textarea>
+	<div id="select">select all</div>
 	<div id="loader" class="{{#if isLoading}}active{{else}}inactive{{/if}}">
 		<div class="cssloader">
 			<div class="loadbar bar01"></div>
